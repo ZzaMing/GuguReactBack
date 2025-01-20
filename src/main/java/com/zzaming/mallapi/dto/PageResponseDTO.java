@@ -6,8 +6,10 @@ import java.util.stream.IntStream;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
 
 @Data
+@ToString
 public class PageResponseDTO<E> {
 
     private List<E> dtoList;
@@ -31,7 +33,7 @@ public class PageResponseDTO<E> {
 
         int start = end - 9;
 
-        int last = (int) (Math.ceil(totalCount / (double) pageRequestDTO.getSize()));
+        int last = (int) (Math.ceil((totalCount / (double) pageRequestDTO.getSize())));
 
         end = end > last ? last : end;
 
