@@ -22,7 +22,7 @@ public class ProductDTO {
 
     private int price;
 
-    private String pdecs;
+    private String pdesc;
 
     private boolean delFalg;
 
