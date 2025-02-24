@@ -63,6 +63,13 @@ public class ProductController {
 
         Long pno = productService.register(productDTO);
 
+        //fetchingModal을 보기위한 등록작업지연
+        try{
+            Thread.sleep(2000);
+        }catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         return Map.of("RESULT", pno);
     }
 
